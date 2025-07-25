@@ -19,11 +19,11 @@ jobs:
             -H "Content-Type: application/json" \
             -d '{"filter":{},"limit":10000,"projection":{"_id":0}}' \
             -o asc-suppliers.json
-
-      - name: Commit and push updated data
+                  - name: Commit and push updated data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add asc-suppliers.json
           git commit -m "Update ASC suppliers data"
           git push
+
